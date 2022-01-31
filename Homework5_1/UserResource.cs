@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework5_1
 {
-    class DataList
+    class UserResource
     {
         public int id { get; set; }
         public string name { get; set; }

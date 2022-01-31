@@ -14,35 +14,17 @@ namespace Homework5_1
         {
             using (var http = new HttpClient())
             {
-
-
-                
-
-
-                
-
-                //Console.WriteLine("'GET' List <Resource>");
-                //var listResource = await http.GetAsync("https://reqres.in/api/unknown");
-                //Console.WriteLine($"Status: {listResource.StatusCode}\n");
-
-                //Console.WriteLine("'GET' Single <Resource>");
-                //var singleResource = await http.GetAsync("https://reqres.in/api/unknown/2");
-                //Console.WriteLine($"Status: {singleResource.StatusCode}\n");
-
-                //Console.WriteLine("'GET' Single <Resource> Not Found");
-                //var singleNotFound = await http.GetAsync("https://reqres.in/api/unknown/23");
-                //Console.WriteLine($"Status: {singleNotFound.StatusCode}\n");
-
-                //Console.WriteLine("'POST' Create");
-                //User user = new User
-                //{
-                //    name = "morpheus",
-                //    job = "leader"
-
-                //};
-                //string serializedUser = JsonConvert.SerializeObject(user);
-                //var create = await http.PostAsync("https://reqres.in/api/users", new StringContent(serializedUser, Encoding.UTF8, "application/json"));
-                //Console.WriteLine($"Status: {create.StatusCode}\n");
+                Console.WriteLine("'POST' Create");
+                User user = new User
+                {
+                    name = "morpheus",
+                    job = "leader"
+                };
+                string serializedUser = JsonConvert.SerializeObject(user);
+                var create = await http.PutAsync("https://reqres.in/api/users/2", new StringContent(serializedUser, Encoding.UTF8, "application/json"));
+                Console.WriteLine($"Status: {create.StatusCode}\n");
+                string newSingleResource = await create.Content.ReadAsStringAsync();
+                Console.WriteLine(newSingleResource);
 
                 //Console.WriteLine("'PUT' Update");
                 //var update = await http.PutAsync("https://reqres.in/api/unknown/23");

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework5_1
 {
-    class Page
+    class PageList
     {
         public int page { get; set; }
         public int per_page { get; set; }
