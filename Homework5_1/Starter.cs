@@ -35,7 +35,9 @@ namespace Homework5_1
                     $"\nSupport Text: {singleUserResult.support.text}" +
                     $"\nSupport Url: {singleUserResult.support.url}");
 
-
+                Console.WriteLine("'GET' Single User Not Found");
+                var singleUserNotFound = await http.GetAsync("https://reqres.in/api/users/23");
+                Console.WriteLine($"Status: {singleUserNotFound.StatusCode}\n");
             }
         }
     }

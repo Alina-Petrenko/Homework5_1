@@ -19,9 +19,7 @@ namespace Homework5_1
                 
 
 
-                //Console.WriteLine("'GET' Single User Not Found");
-                //var singleUserNotFound = await http.GetAsync("https://reqres.in/api/users/23");
-                //Console.WriteLine($"Status: {singleUserNotFound.StatusCode}\n");
+                
 
                 //Console.WriteLine("'GET' List <Resource>");
                 //var listResource = await http.GetAsync("https://reqres.in/api/unknown");
