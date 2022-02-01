@@ -8,7 +8,7 @@ namespace Homework5_1
 {
     class SingleUser
     {
-        public DataSingle data { get; set; }
+        public UserSingle data { get; set; }
         public Support support { get; set; }
 
     }
