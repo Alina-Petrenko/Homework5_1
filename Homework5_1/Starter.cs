@@ -15,6 +15,7 @@ namespace Homework5_1
             using (var http = new HttpClient())
             {
                 //'GET' List Users
+
                 Console.WriteLine("'GET' List Users");
                 var listUsers = await http.GetAsync("https://reqres.in/api/users?page=2");
                 Console.WriteLine($"Status: {listUsers.StatusCode}");
@@ -26,6 +27,7 @@ namespace Homework5_1
                 }
                 Console.WriteLine($"Page: { newlistUsersResult.page}, Total: {newlistUsersResult.total}, Per Page: {newlistUsersResult.per_page}, " +
                     $"Total Pages: {newlistUsersResult.total_pages}\nSupport Text: {newlistUsersResult.support.text}\nSupport Url: {newlistUsersResult.support.url}\n");
+
 
 
                 //'GET' Single User
