@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework5_1
 {
-    class DataSingle
+    class UserSingle
     {
         public int id { get; set; }
         public string email { get; set; }
